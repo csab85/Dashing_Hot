@@ -18,20 +18,43 @@ public:
 	//========================
 #pragma region MY VARS
 
+	//STATUS VARS
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Health;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	bool bDead;
+
+
+	//DASH VARS
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float dashSpeed;
+	float DashSpeed;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float dashTime;
+	float DashTime;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float dashHitForce;
+	float DashHitForce;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	FVector dashDirection;
+	float DashCooldown;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	bool dashing;
+	FVector DashDamage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	FVector DashDirection;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	bool bDashing;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	bool bDashCoolingDown;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	bool bCanDash;
+
+
 
 #pragma endregion
 	//========================
