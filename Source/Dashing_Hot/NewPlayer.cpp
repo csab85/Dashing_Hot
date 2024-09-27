@@ -23,6 +23,10 @@ void ANewPlayer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (Health <= 0)
+	{
+		bDead = true;
+	}
 }
 
 // Called to bind functionality to input
@@ -38,9 +42,9 @@ void ANewPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 FVector2D ANewPlayer::GetMousePositionFromPlayer(FVector2D playerPosition, FVector2D mousePosition)
 {
 	//get position relative to player
-	FVector2D relativePosition = mousePosition - playerPosition;
+	FVector2D RelativePosition = mousePosition - playerPosition;
 
-	return relativePosition;
+	return RelativePosition;
 }
 
 #pragma endregion

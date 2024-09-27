@@ -15,7 +15,21 @@ public:
 	// Sets default values for this character's properties
 	AEnemy();
 
-protected:
+	//========================
+	#pragma region MY VARS
+
+	//STATS
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Health;
+
+	//KNOCKBACK
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
+	float KnockbackDuration;
+
+	#pragma endregion
+	//========================
+
+	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
