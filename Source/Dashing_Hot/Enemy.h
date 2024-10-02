@@ -22,6 +22,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Health;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Range;
+
 	//KNOCKBACK
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
 	float KnockbackDuration;
