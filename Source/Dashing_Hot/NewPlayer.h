@@ -20,6 +20,9 @@ public:
 
 	//STATUS VARS
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MaxHealth;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Health;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")

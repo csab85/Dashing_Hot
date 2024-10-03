@@ -19,4 +19,7 @@ class DASHING_HOT_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLib
 
 	UFUNCTION(BlueprintCallable, Category = "Calculations")
 	static FVector GetDashFinalPoint(FVector startPosition, FVector direction, float distance);
+
+	UFUNCTION(BlueprintCallable)
+	static TSubclassOf<AActor> CheckIfActorClassIsInArray(TArray<TSubclassOf<AActor>> actorsClassArray, TSubclassOf<AActor> actorClass);
 };

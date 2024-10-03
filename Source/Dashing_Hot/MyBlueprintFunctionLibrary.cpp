@@ -35,3 +35,23 @@ FVector UMyBlueprintFunctionLibrary::GetDashFinalPoint(FVector startPosition, FV
 
 	return finalPoint;
 }
+
+TSubclassOf<AActor> UMyBlueprintFunctionLibrary::CheckIfActorClassIsInArray(TArray<TSubclassOf<AActor>> actorsClassArray, TSubclassOf<AActor> actorClass)
+{
+	//create return var
+	TSubclassOf<AActor> equalActorClass = nullptr;
+
+	//check each actor in the array
+	for (TSubclassOf<AActor> actualActorClass : actorsClassArray)
+	{
+		//see if its the same class as the given actor
+		if (actualActorClass == actorClass)
+		{
+			//update return and break loop
+			equalActorClass = actorClass;
+			break;
+		}
+	}
+
+	return equalActorClass;
+}
