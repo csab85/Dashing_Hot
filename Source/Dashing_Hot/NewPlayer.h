@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "GameplayCharacter.h"
 #include "NewPlayer.generated.h"
 
 UCLASS()
-class DASHING_HOT_API ANewPlayer : public ACharacter
+class DASHING_HOT_API ANewPlayer : public AGameplayCharacter
 {
 	GENERATED_BODY()
 
@@ -18,17 +18,6 @@ public:
 	//========================
 #pragma region MY VARS
 
-	//STATUS VARS
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float MaxHealth;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float Health;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	bool bDead;
-
-
 	//DASH VARS
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashSpeed;
@@ -37,13 +26,16 @@ public:
 	float DashTime;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float DashHitForce;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashCooldown;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	FVector DashDamage;
+	float DashBaseDamage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float DashBasePushForce;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float DashSuperTreshold;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	FVector DashDirection;
@@ -67,6 +59,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Calculations")
 	FVector2D GetMousePositionFromPlayer(FVector2D playerPosition, FVector2D mousePosition);
+
+	UFUNCTION(BlueprintCallable, Category = "Calculations")
+	void CalculateDamageAndPushMultipliyer(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
 
 #pragma endregion
 	//========================

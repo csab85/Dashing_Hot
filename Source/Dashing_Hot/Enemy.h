@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "GameplayCharacter.h"
 #include "Enemy.generated.h"
 
 UCLASS()
-class DASHING_HOT_API AEnemy : public ACharacter
+class DASHING_HOT_API AEnemy : public AGameplayCharacter
 {
 	GENERATED_BODY()
 
@@ -19,12 +19,6 @@ public:
 	#pragma region MY VARS
 
 	//STATS
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float MaxHealth;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float Health;
-
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Range;
 
