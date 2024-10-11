@@ -20,7 +20,13 @@ public:
 
 	//STATS
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float Range;
+	float RepositionRadius;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float RepositionNormalRadius;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float RepositionFleeingRadius;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float ReloadTime;
@@ -28,6 +34,9 @@ public:
 	//KNOCKBACK
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
 	float KnockbackDuration;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
+	float KnockbackStunTime;
 
 	#pragma endregion
 	//========================
