@@ -42,7 +42,7 @@ FVector2D ANewPlayer::GetMousePositionFromPlayer(FVector2D playerPosition, FVect
 	return RelativePosition;
 }
 
-void ANewPlayer::CalculateDamageAndPushMultipliyer(float TimeDashing, float& FinalDamage, float& FinalPushForce, bool& bSuperPush)
+void ANewPlayer::CalculateDamageAndPushMultiplier(float TimeDashing, float& FinalDamage, float& FinalPushForce, bool& bSuperPush)
 {
 	//set super push
 	bSuperPush = false;

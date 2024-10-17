@@ -41,9 +41,6 @@ public:
 	FVector DashDirection;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	bool bDashing;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	bool bDashCoolingDown;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
@@ -61,7 +58,7 @@ public:
 	FVector2D GetMousePositionFromPlayer(FVector2D playerPosition, FVector2D mousePosition);
 
 	UFUNCTION(BlueprintCallable, Category = "Calculations")
-	void CalculateDamageAndPushMultipliyer(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
+	void CalculateDamageAndPushMultiplier(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
 
 #pragma endregion
 	//========================

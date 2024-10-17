@@ -25,6 +25,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Health;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	bool bDashing;
+
 #pragma endregion
 	//========================
 
