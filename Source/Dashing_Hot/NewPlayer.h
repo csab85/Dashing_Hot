@@ -46,6 +46,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	bool bCanDash;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	bool bDoubleDashing;
+
 
 
 #pragma endregion
