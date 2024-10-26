@@ -23,7 +23,7 @@ public:
 	float DashSpeed;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float DashTime;
+	float DashDuration;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashCooldown;

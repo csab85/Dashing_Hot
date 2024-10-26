@@ -48,7 +48,7 @@ void ANewPlayer::CalculateDamageAndPushMultiplier(float TimeDashing, float& Fina
 	bSuperPush = false;
 
 	//calculate the percentage of the dash that was used
-	float DashUsage = TimeDashing / DashTime;
+	float DashUsage = TimeDashing / DashDuration;
 
 	//add bonus if usage is higher than the super dash treshold
 	if (DashUsage > DashSuperTreshold)
