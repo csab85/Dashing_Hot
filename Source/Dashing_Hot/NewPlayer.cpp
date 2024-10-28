@@ -77,6 +77,13 @@ void ANewPlayer::CalculateDamageAndPushMultiplier(float TimeDashing, float& Fina
 	return;
 }
 
+float ANewPlayer::CalculateChargeBonus(float Charge)
+{
+	float Bonus = (0.27 * FMath::Pow(Charge, 3)) - (FMath::Pow(Charge, 2)) + (1.93 * Charge);
+
+	return Bonus;
+}
+
 #pragma endregion
 //========================
 

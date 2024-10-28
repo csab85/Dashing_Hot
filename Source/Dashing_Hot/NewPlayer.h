@@ -37,6 +37,12 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashSuperTreshold;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Charged Dash")
+	float ChargeRate;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Charged Dash")
+	float MaxCharge;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	FVector DashDirection;
 
@@ -60,8 +66,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Calculations")
 	FVector2D GetMousePositionFromPlayer(FVector2D playerPosition, FVector2D mousePosition);
 
-	UFUNCTION(BlueprintCallable, Category = "Calculations")
+	UFUNCTION(BlueprintCallable, Category = "Dash")
 	void CalculateDamageAndPushMultiplier(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
+
+
+	UFUNCTION(BlueprintCallable, Category = "Charged Dash")
+	float CalculateChargeBonus(float Charge);
 
 #pragma endregion
 	//========================
