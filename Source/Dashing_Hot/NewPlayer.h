@@ -19,8 +19,7 @@ public:
 #pragma region MY VARS
 
 	//STATS VARS
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
-	float StunDuration;
+
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float Heat;
@@ -88,7 +87,7 @@ public:
 	void CalculateDamageAndPushMultiplier(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
 
 
-	UFUNCTION(BlueprintCallable, Category = "Charged Dash")
+	UFUNCTION(BlueprintCallable, Category = "Dash")
 	float CalculateChargeBonus(float Charge);
 
 #pragma endregion

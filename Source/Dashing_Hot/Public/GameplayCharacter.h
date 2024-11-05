@@ -25,8 +25,14 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Health;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float StunDuration;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	bool bDashing;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	bool bStunned;
 
 #pragma endregion
 	//========================
