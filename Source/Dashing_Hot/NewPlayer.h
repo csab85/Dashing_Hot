@@ -18,6 +18,16 @@ public:
 	//========================
 #pragma region MY VARS
 
+	//STATS VARS
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float StunDuration;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float Heat;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float MaxHeat;
+
 	//DASH VARS
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashSpeed;
@@ -37,11 +47,20 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float DashSuperTreshold;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Charged Dash")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float DoubleDashHeatUsage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float ChargeRate;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Charged Dash")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float MaxCharge;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float ChargedDashHeatUsage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float ExplosiveDashHeatUsage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	FVector DashDirection;
@@ -54,7 +73,6 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	bool bDoubleDashing;
-
 
 
 #pragma endregion
