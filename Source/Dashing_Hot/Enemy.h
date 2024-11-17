@@ -26,10 +26,7 @@ public:
 	float RepositionNormalRadius;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float RepositionFleeingRadius;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float ReloadTime;
+	float CooldownTime;
 
 	//KNOCKBACK
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
