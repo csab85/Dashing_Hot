@@ -33,6 +33,9 @@ public:
 	float KnockbackDuration;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
+	FVector KnockbackDirection;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Knockback")
 	float KnockbackStunTime;
 
 	#pragma endregion

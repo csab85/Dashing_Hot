@@ -59,6 +59,16 @@ public:
 	float ChargedDashHeatUsage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float ExplosiveDashForce;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float ExplosiveDashRadius;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
+	float ExplosiveDashDamage
+		;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
 	float ExplosiveDashHeatUsage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Dash")
