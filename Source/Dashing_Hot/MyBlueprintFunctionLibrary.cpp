@@ -32,7 +32,7 @@ FVector UMyBlueprintFunctionLibrary::GetVectorToLocation(FVector origin, FVector
 FVector UMyBlueprintFunctionLibrary::GetDashFinalPoint(FVector startPosition, FVector direction, float distance)
 {
 	FVector finalPoint = startPosition + (direction * distance);
-
+	
 	return finalPoint;
 }
 
