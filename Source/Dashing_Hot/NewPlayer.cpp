@@ -42,13 +42,13 @@ FVector2D ANewPlayer::GetMousePositionFromPlayer(FVector2D playerPosition, FVect
 	return RelativePosition;
 }
 
-void ANewPlayer::CalculateDamageAndPushMultiplier(float TimeDashing, float& FinalDamage, float& FinalPushForce, bool& bSuperPush)
+void ANewPlayer::CalculateDamageAndPushMultiplier(float TimeDashing, float& FinalDamage, float& FinalPushForce, float& DashUsage, bool& bSuperPush)
 {
 	//set super push
 	bSuperPush = false;
 
 	//calculate the percentage of the dash that was used
-	float DashUsage = TimeDashing / DashDuration;
+	DashUsage = TimeDashing / DashDuration;
 
 	//add bonus if usage is higher than the super dash treshold
 	if (DashUsage > DashSuperTreshold)

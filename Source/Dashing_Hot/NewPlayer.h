@@ -94,7 +94,7 @@ public:
 	FVector2D GetMousePositionFromPlayer(FVector2D playerPosition, FVector2D mousePosition);
 
 	UFUNCTION(BlueprintCallable, Category = "Dash")
-	void CalculateDamageAndPushMultiplier(float TimeDashing, float &FinalDamage, float &FinalPushForce, bool& bSuperPush);
+	void CalculateDamageAndPushMultiplier(float TimeDashing, float &FinalDamage, float &FinalPushForce, float& DashUsage, bool& bSuperPush);
 
 
 	UFUNCTION(BlueprintCallable, Category = "Dash")
